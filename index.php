@@ -9,13 +9,10 @@ use \stradivari\core\AbstractController as Controller;
 Autoloader::inheritComposer();
 Autoloader::register();
 
-#Redirector::$defaultRulesFile = Autoloader::searchFile('user/project/rules.yaml');
+#Redirector::$defaultRulesFile = Autoloader::searchFile('user/project/redirector_rules.yaml');
+#Router::$defaultRulesFile = Autoloader::searchFile('user/project/router_rules.yaml');
 #Router::$controllerNamespace = '\\user\\project\\router';
 #Controller::$viewNamespace = '\\user\\project\\view';
-
-Redirector::$defaultRulesFile = Autoloader::searchFile('strdivari/core/rules.yaml');
-Router::$controllerNamespace = '\\stradivari\\stradivari_default\\controller';
-Controller::$viewNamespace = '\\stradivari\\stradivari_default\\view';
 
 App::$pool = new \stradivari\pool\Pool();
 if ( isset($argv) ) {
