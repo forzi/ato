@@ -165,9 +165,12 @@
     ],
     "minimum-stability": "dev",
 	"autoload": {
-		"psr-0": {"": "vendor/"},
+		"psr-0": {
+            "": "vendor/"
+        },
 		"psr-4": {
 			"stradivari\\": ["vendor/stradivari/lib/"],
+			"stradivari\\stradivari_default": ["vendor/stradivari/stradivari_default/dev/", "vendor/stradivari/stradivari_default/test/", "vendor/stradivari/stradivari_default/prod/"],
 			"user\\project\\": ["vendor/user/project/dev/", "vendor/user/project/test/", "vendor/user/project/prod/"]
 		},
 		"files": ["vendor/stradivari/core/functions.php"]
