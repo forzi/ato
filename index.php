@@ -13,6 +13,7 @@ Autoloader::register();
 #Router::$defaultRulesFile = Autoloader::searchFile('user/project/router_rules.yaml');
 #Router::$controllerNamespace = '\\user\\project\\router';
 #Controller::$viewNamespace = '\\user\\project\\view';
+#App::$exceptionInterseptor = '\\stradivari\\stradivari_default\\ExceptionInterceptor::execute';
 
 App::$pool = new \stradivari\pool\Pool();
 if ( isset($argv) ) {
