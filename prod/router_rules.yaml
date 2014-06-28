@@ -1,1 +1,1 @@
-"/^##host##\\/(author)\\/$/": "\\stradivari\\stradivari_default\\controller\\protected_Credits ##1## Alexey Penkov forzi@mail333.com"
+"^##host##/(author)/$": '\stradivari\stradivari_default\controller\protected_Credits ##1## Alexey Penkov forzi@mail333.com'
