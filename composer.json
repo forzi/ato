@@ -129,6 +129,30 @@
 		{
 			"type": "package",
 			"package": {
+			"name": "stradivari/lib/interceptor",
+			"version": "dev-master",
+				"source": {
+					"type": "git",
+					"url": "git@github.com:forzi/interceptor.git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+			"name": "stradivari/interfaces",
+			"version": "dev-master",
+				"source": {
+					"type": "git",
+					"url": "git@github.com:forzi/interfaces.git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
 			"name": "stradivari/core",
 			"version": "dev-master",
 				"source": {
@@ -170,14 +194,14 @@
         },
 		"psr-4": {
 			"stradivari\\": ["vendor/stradivari/lib/"],
-			"stradivari\\stradivari_default": ["vendor/stradivari/stradivari_default/dev/", "vendor/stradivari/stradivari_default/test/", "vendor/stradivari/stradivari_default/prod/"],
+			"stradivari\\stradivari_default\\": ["vendor/stradivari/stradivari_default/dev/", "vendor/stradivari/stradivari_default/test/", "vendor/stradivari/stradivari_default/prod/"],
 			"user\\project\\": ["vendor/user/project/dev/", "vendor/user/project/test/", "vendor/user/project/prod/"]
 		},
 		"files": ["vendor/stradivari/core/functions.php"]
 	},
 	"scripts": {
 		"post-install-cmd": [
-			"sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev",
+			"sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev --confirm",
             "sudo chmod 777 vendor/stradivari/lib/render/tmp -R",
             "sudo chmod 777 vendor/stradivari/lib/render/render -R",
             "cd vendor/ariya/phantomjs_stradivari_fork/ && ./build.sh --confirm"

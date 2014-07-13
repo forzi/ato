@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'user\\project\\' => array($vendorDir . '/user/project/dev', $vendorDir . '/user/project/test', $vendorDir . '/user/project/prod'),
-    'stradivari\\stradivari_default' => array($vendorDir . '/stradivari/stradivari_default/dev', $vendorDir . '/stradivari/stradivari_default/test', $vendorDir . '/stradivari/stradivari_default/prod'),
+    'stradivari\\stradivari_default\\' => array($vendorDir . '/stradivari/stradivari_default/dev', $vendorDir . '/stradivari/stradivari_default/test', $vendorDir . '/stradivari/stradivari_default/prod'),
     'stradivari\\' => array($vendorDir . '/stradivari/lib'),
 );
