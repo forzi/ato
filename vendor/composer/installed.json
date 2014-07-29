@@ -120,18 +120,6 @@
         "installation-source": "source"
     },
     {
-        "name": "ariya/phantomjs_stradivari_fork",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "git@github.com:forzi/phantomjs_stradivari_fork.git",
-            "reference": "master"
-        },
-        "type": "library",
-        "installation-source": "source"
-    },
-    {
         "name": "keboola/csv",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -265,5 +253,41 @@
         ],
         "description": "Symfony Yaml Component",
         "homepage": "http://symfony.com"
+    },
+    {
+        "name": "stradivari/lib/interceptor",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:forzi/interceptor.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "stradivari/interfaces",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:forzi/interfaces.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "ariya/phantomjs_stradivari_fork",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:forzi/phantomjs_stradivari_fork.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
     }
 ]

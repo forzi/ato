@@ -22,6 +22,8 @@
         "stradivari/lib/curl": "dev-master",
         "stradivari/lib/controller": "dev-master",
         "stradivari/lib/render": "dev-master",
+        "stradivari/lib/interceptor": "dev-master",
+        "stradivari/interfaces": "dev-master",
         "stradivari/core": "dev-master",
         "stradivari/stradivari_default": "dev-master",
         "ariya/phantomjs_stradivari_fork": "dev-master",
