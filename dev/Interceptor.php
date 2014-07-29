@@ -3,6 +3,7 @@ namespace stradivari\stradivari_default {
 use \stradivari\core\App;
     abstract class Interceptor extends \stradivari\core\AbstractController {
         public static function catchException(\Exception $exception) {
+			#throw $exception;
             if ( isset(App::$pool['input']['argv']) ) {
                 throw $exception;
             }

@@ -4,6 +4,7 @@ include __DIR__ . '/../core/Autoloader.php';
 use \stradivari\core\Autoloader;
 use \stradivari\pool\Pool;
 use \stradivari\core\App;
+use \stradivari\core\Director;
 
 Autoloader::inheritComposer();
 Autoloader::register();
@@ -26,6 +27,8 @@ $interceptorHandler->exception = '\stradivari\stradivari_default\Interceptor::ca
 # declare(ticks = 1);
 # $interceptorHandler->tick['microtimeEvaluator'] = '\stradivari\stradivari_default\Interceptor::microtimeEvaluator';
 
+Director::$lowerCase = false;
+
 App::$pool['tools']['startMicrotime'] = microtime(true);
 App::$pool['settings']['company'] = 'stradivari';
 App::$pool['settings']['product'] = 'stradivari_default';
@@ -33,12 +36,12 @@ App::$pool['settings']['product'] = 'stradivari_default';
 #App::$pool['settings']['defaultSubDir'] = App::$pool['settings']['company'] . '/' . App::$pool['settings']['product']; (by default)
 #App::$pool['settings']['redirectQueryFile'] = Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/redirect_query.yaml'); (by default)
 #App::$pool['settings']['redirectUriFile'] = Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/route_query.yaml'); (by default)
-##App::$pool['settings']['redirectUriFile'] = Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/redirect_uri.yaml'); (by default)
+#App::$pool['settings']['redirectUriFile'] = Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/redirect_uri.yaml'); (by default)
 #App::$pool['settings']['routeUriFile'] = Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/route_uri.yaml'); (by default)
 #App::$pool['settings']['defaultNamespace'] = '\\' . App::$pool['settings']['company'] . '\\' . App::$pool['settings']['product']; (by default)
 #App::$pool['settings']['modelNamespace'] = App::$pool['settings']['defaultNamespace'] . '\model'; (by default)
 #App::$pool['settings']['viewNamespace'] = $defaultSettings['defaultNamespace'] . '\view'; (by default)
-#App::$pool['settings']['controllerNamespace'] = App::$pool['settings']['defaultNamespace'] . '\controller'; (by default)
+#App::$pool['settings']['controllerNamespace'] = App::$pool['settings']['defaultNamespace'] . '\router'; (by default)
 if ( isset($argv) ) {
 	App::$pool['input']['argv'] = $argv;
 }

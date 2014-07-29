@@ -1,0 +1,12 @@
+'^/(author)/$':
+    '\stradivari\stradivari_default\router\protected_Main ##1## Alexey Penkov forzi@mail333.com'
+    
+'^/php[-,_,.]?info/$':
+    '\stradivari\stradivari_default\router\protected_Main php_info'
+    
+'^/render/$':
+    '\stradivari\stradivari_default\router\protected_Render main'
+    
+'^/render/([a-z,0-9]{40}\.(pdf|gif|jpg|jpeg|png))$':
+    '\stradivari\stradivari_default\router\protected_Render сache ##1##'
+    
