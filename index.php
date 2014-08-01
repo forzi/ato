@@ -9,6 +9,11 @@ use \stradivari\core\Director;
 Autoloader::inheritComposer();
 Autoloader::register();
 
+$query = parse_url($_SERVER['REQUEST_URI']);
+$query = isset($query['query']) ? $query['query'] : array();
+$_GET = array();
+parse_str($query, $_GET);
+
 #$_SERVER['QUERY_STRING'] = '/' . left_cut($_SERVER['QUERY_STRING'], '/'); // Sometimes some servers doesn't add start slesh
 
 $creator = new Pool();

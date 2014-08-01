@@ -4,5 +4,9 @@ namespace stradivari\stradivari_default\router {
         protected static function main__get() {
             echo \stradivari\core\AbstractController::loadView('main');
         }
+		/* protected static function main__post() {
+			var_dump($_POST);
+			d(getallheaders());
+		} */
     }
 }
