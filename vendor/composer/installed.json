@@ -289,5 +289,17 @@
         },
         "type": "library",
         "installation-source": "source"
+    },
+    {
+        "name": "stradivari/lib/url",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:forzi/url.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
     }
 ]

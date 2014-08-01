@@ -5,28 +5,29 @@
 	"license": "GPL-3.0",
 	"keywords": ["test", "project"],
 	"authors": [
-        {
-            "name": "Alexey Penkov",
-            "email": "forzi@mail333.com",
-            "homepage": "https://github.com/forzi/",
-            "role": "Owner, Developer"
-        }
+		{
+			"name": "Alexey Penkov",
+			"email": "forzi@mail333.com",
+			"homepage": "https://github.com/forzi/",
+			"role": "Owner, Developer"
+		}
 	],
 	"require": {
 		"php": ">=5.3.2",
 		"stradivari/lib/date_time": "dev-master",
 		"stradivari/lib/data_converter": "dev-master",
-        "stradivari/lib/enum": "dev-master",
-        "stradivari/lib/class_array": "dev-master",
-        "stradivari/lib/pool": "dev-master",
-        "stradivari/lib/curl": "dev-master",
-        "stradivari/lib/controller": "dev-master",
-        "stradivari/lib/render": "dev-master",
-        "stradivari/lib/interceptor": "dev-master",
-        "stradivari/interfaces": "dev-master",
-        "stradivari/core": "dev-master",
-        "stradivari/stradivari_default": "dev-master",
-        "ariya/phantomjs_stradivari_fork": "dev-master",
+		"stradivari/lib/enum": "dev-master",
+		"stradivari/lib/class_array": "dev-master",
+		"stradivari/lib/pool": "dev-master",
+		"stradivari/lib/curl": "dev-master",
+		"stradivari/lib/controller": "dev-master",
+		"stradivari/lib/render": "dev-master",
+		"stradivari/lib/interceptor": "dev-master",
+		"stradivari/lib/url": "dev-master",
+		"stradivari/interfaces": "dev-master",
+		"stradivari/core": "dev-master",
+		"stradivari/stradivari_default": "dev-master",
+		"ariya/phantomjs_stradivari_fork": "dev-master",
 		"keboola/csv": "dev-master",
 		"symfony/yaml": "2.5.*@dev",
 		"openlss/lib-array2xml": "dev-master"
@@ -35,8 +36,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/data_converter",
-			"version": "dev-master",
+				"name": "stradivari/lib/data_converter",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "https://github.com/forzi/data_converter.git",
@@ -47,8 +48,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/date_time",
-			"version": "dev-master",
+				"name": "stradivari/lib/date_time",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "https://github.com/forzi/date_time.git",
@@ -56,11 +57,11 @@
 				}
 			}
 		},
-        {
+		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/enum",
-			"version": "dev-master",
+				"name": "stradivari/lib/enum",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "https://github.com/forzi/enum.git",
@@ -71,8 +72,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/class_array",
-			"version": "dev-master",
+				"name": "stradivari/lib/class_array",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/class_array.git",
@@ -83,8 +84,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/pool",
-			"version": "dev-master",
+				"name": "stradivari/lib/pool",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/pool.git",
@@ -95,8 +96,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/curl",
-			"version": "dev-master",
+				"name": "stradivari/lib/curl",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/curl.git",
@@ -107,8 +108,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/controller",
-			"version": "dev-master",
+				"name": "stradivari/lib/controller",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/controller.git",
@@ -119,8 +120,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/render",
-			"version": "dev-master",
+				"name": "stradivari/lib/render",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/render.git",
@@ -131,8 +132,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/lib/interceptor",
-			"version": "dev-master",
+				"name": "stradivari/lib/interceptor",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/interceptor.git",
@@ -143,8 +144,20 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/interfaces",
-			"version": "dev-master",
+				"name": "stradivari/lib/url",
+				"version": "dev-master",
+				"source": {
+					"type": "git",
+					"url": "git@github.com:forzi/url.git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "stradivari/interfaces",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/interfaces.git",
@@ -155,8 +168,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/core",
-			"version": "dev-master",
+				"name": "stradivari/core",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/stradivari_core.git",
@@ -167,8 +180,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "stradivari/stradivari_default",
-			"version": "dev-master",
+				"name": "stradivari/stradivari_default",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/stradivari_default.git",
@@ -179,8 +192,8 @@
 		{
 			"type": "package",
 			"package": {
-			"name": "ariya/phantomjs_stradivari_fork",
-			"version": "dev-master",
+				"name": "ariya/phantomjs_stradivari_fork",
+				"version": "dev-master",
 				"source": {
 					"type": "git",
 					"url": "git@github.com:forzi/phantomjs_stradivari_fork.git",
@@ -188,12 +201,12 @@
 				}
 			}
 		}
-    ],
-    "minimum-stability": "dev",
+	],
+	"minimum-stability": "dev",
 	"autoload": {
 		"psr-0": {
-            "": "vendor/"
-        },
+			"": "vendor/"
+		},
 		"psr-4": {
 			"stradivari\\": ["vendor/stradivari/lib/"],
 			"stradivari\\stradivari_default\\": ["vendor/stradivari/stradivari_default/dev/", "vendor/stradivari/stradivari_default/test/", "vendor/stradivari/stradivari_default/prod/"],
@@ -204,9 +217,9 @@
 	"scripts": {
 		"post-install-cmd": [
 			"sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev --confirm",
-            "sudo chmod 777 vendor/stradivari/lib/render/tmp -R",
-            "sudo chmod 777 vendor/stradivari/lib/render/render -R",
-            "cd vendor/ariya/phantomjs_stradivari_fork/ && ./build.sh --confirm"
-        ]
-    }
+			"sudo chmod 777 vendor/stradivari/lib/render/tmp -R",
+			"sudo chmod 777 vendor/stradivari/lib/render/render -R",
+			"cd vendor/ariya/phantomjs_stradivari_fork/ && ./build.sh --confirm"
+		]
+	}
 }
