@@ -1,2 +1,6 @@
 /prod/router/Jasper.php
 /.gitignore
+composer.lock
+composer.phar
+vendor/ariya/*
+vendor/composer/*
