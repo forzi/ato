@@ -22,18 +22,19 @@ use \stradivari\core\App;
                 header("HTTP/1.1 {$error['code']} {$error['msg']}");
                 echo self::loadView('exception', array('exception' => $exception, 'lineCount' => self::$exceptionLineCount));
             }
+			die();
 		}
-		public static function catchError($errno, $errstr, $errfile = '', $errline = 0, $errcontext = array()) {
-			d($errno, 0);
-			d($errstr, 0);
-			d($errfile, 0);
-			d($errline, 0);
-			d($errcontext, 0);
-			return false;
+		public static function catchError($errno, $errstr, $errfile = '', $errline = 0, $errcontext = array()) {			
+			$e = new exception\ErrorException($errstr, $errno, 0, $errfile, $errline);
+			if ( $e->isFatal ) {
+				self::catchException($e);
+				return false;
+			}
+			throw $e;
 		}
 		public static function microtimeEvaluator() {
 			$oldTime = App::$pool['tools']['startMicrotime'];
-			if ($oldTime === null) {
+			if ( $oldTime === null ) {
 				var_dump('not set');
 				return false;
 			}

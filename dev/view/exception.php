@@ -10,10 +10,12 @@
 	$firstLine = $line - $lineCount;
 	if ( $firstLine > 1 ) {
 		$content = array_chunk($content, $firstLine, true);
-		$content = $content[1];
+		$content = isset($content[1]) ? $content[1] : array();
 	}
 ?>
-Catch Exception: <?=get_class($exception)?>
+Catch Exception: <?=get_class($exception)?> 
+
+with code: #<?=$exception->getCode()?> <?= $exception instanceof \stradivari\stradivari_default\exception\ErrorException ? '(' . $exception->getType() . ')' : '' ?>
 
 
 with message: <?=$exception->getMessage()?>
