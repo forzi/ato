@@ -15,6 +15,7 @@ namespace stradivari\stradivari_default\router {
 		private static function abstractRender($params) {
             $creator = \stradivari\core\App::$creator;
             $render = $creator['\stradivari\render\Render__AxWrapper']();
+            $render->phantomPath = \stradivari\core\Autoloader::searchFile('/arya/phantomjs_stradivari_fork/');
 			d($render->getContent($params));
         }
     }
