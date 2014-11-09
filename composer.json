@@ -15,8 +15,7 @@
 	"require": {
 		"php": ">=5.4.0",
 		"stradivari/lib": "dev-master",
-		"stradivari/core": "dev-master",
-		"keboola/csv": "dev-master"
+		"stradivari/core": "dev-master"
 	},
 	"minimum-stability": "dev",
 	"repositories": [
