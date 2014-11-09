@@ -34,16 +34,12 @@
 		}
 	],
 	"autoload": {
-		"psr-0": {
-			"": "vendor/"
-		},
 		"psr-4": {
 			"stradivari\\stradivari_default\\": [
-				"vendor/stradivari/stradivari_default/dev/",
-				"vendor/stradivari/stradivari_default/test/",
-				"vendor/stradivari/stradivari_default/prod/"
+				"dev/",
+				"test/",
+				"prod/"
 			]
-		},
-		"files": ["vendor/stradivari/core/functions.php"]
+		}
 	}
 }
