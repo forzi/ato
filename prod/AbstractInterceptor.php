@@ -1,5 +1,5 @@
 <?
-namespace stradivari\stradivari_default {
+namespace forzi\ato {
 use \stradivari\core\App;
     abstract class AbstractInterceptor extends \stradivari\core\AbstractController {
         public static $exceptionLineCount = 10;
@@ -20,7 +20,7 @@ use \stradivari\core\App;
             }
             if ( $error['code'] && $error['code'] != 200 ) {
                 header("HTTP/1.1 {$error['code']} {$error['msg']}");
-                echo static::loadView($error, $exception);
+                echo static::loadView($exception);
             }
         }
         public static function catchError($errno, $errstr, $errfile = '', $errline = 0, $errcontext = array()) {			

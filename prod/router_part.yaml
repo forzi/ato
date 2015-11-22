@@ -1,3 +1,2 @@
 '[A-Z]+':
     '\stradivari\stradivari_default\router\protected_Main lowerCaseRedirect ##part##'
-    

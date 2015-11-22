@@ -1,5 +1,5 @@
 <?
-namespace stradivari\stradivari_default\exception {
+namespace forzi\ato\exception {
     class ErrorException extends \ErrorException {
 		protected $type = '';
 		protected $isFatal = false;

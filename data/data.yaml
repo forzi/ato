@@ -1,0 +1,21 @@
+s_0:
+    lname: ТКАЛІЧ
+    fname: Тарас
+    sname: Анатолійович
+    birth_date: '1971-08-28'
+    inn: ''
+    passport: { number: '', date: '', place: '' }
+    tel: { 1: '', 2: '', 3: '' }
+    legal_place: { index: '', region: '1', settlement_type: '1', settlement: '', street_type: '2', street: '', number: '', corps: '', apartment: '' }
+    fact_place: { index: '', region: '1', settlement_type: '1', settlement: '', street_type: '2', street: '', number: '', corps: '', apartment: '' }
+    mobilisation_date: ''
+    demobilisation_date: ''
+    mobilisation: { region: '1' }
+    mobilisation_place: { settlement_type: '1', settlement: '', place: '' }
+    unit: { ordination: '1', name: '' }
+    callsign: ''
+    death_date: ''
+    diagnosis: ''
+    grave: { region: '1', settlement_type: '1', settlement: '', street_type: '2', street: '', comment: '' }
+    relations: { comment: '' }
+    id: s_0

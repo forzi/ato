@@ -4,9 +4,5 @@
 '^/php[-,_,.]?info/$':
     '\stradivari\stradivari_default\router\protected_Main php_info'
     
-'^/render/$':
-    '\stradivari\stradivari_default\router\protected_Render main'
-    
-'^/render/([a-z,0-9]{40}\.(pdf|gif|jpg|jpeg|png))$':
-    '\stradivari\stradivari_default\router\protected_Render сache ##1##'
-    
+'view/list\.(.*)':
+    '\forzi\ato\router\View list ##1##'

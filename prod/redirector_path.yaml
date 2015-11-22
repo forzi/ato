@@ -11,3 +11,8 @@
 '^/(stradivari)/$':
     'https://github.com/forzi/##1##/'
     
+'^$': '/view/list/'
+
+'^/$': '/view/list/'
+
+'/view/list.html?': '/view/list/'

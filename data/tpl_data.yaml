@@ -1,0 +1,23 @@
+s_0:
+    lname: Іванов
+    fname: Іван
+    sname: Іванович
+    birth_date: '2015-10-02'
+    inn: '1111111111'
+    passport: { number: 'АА 111111', date: '2015-10-01', place: "Донецким\r\nОлоло-Трололо Украины в Донецкой обл." }
+    tel: { 1: 111-11-11, 2: 222-22-22, 3: 333-33-33 }
+    legal_place: { index: '222222', region: '2', settlement_type: '2', settlement: Ололуевка, street_type: '3', street: Бориспольский, number: '111', corps: '11', apartment: '22222' }
+    fact_place: { index: '333', region: '3', settlement_type: '4', settlement: Торжок, street_type: '5', street: Челни, number: '23', corps: '0', apartment: '99' }
+    mobilisation_date: '2015-10-05'
+    demobilisation_date: '2015-10-05'
+    mobilisation: { region: '19' }
+    mobilisation_place: { settlement_type: '8', settlement: Широкий, place: 'ОРВК м. Куйбишев' }
+    unit: { ordination: '2', name: 'Бригада №5' }
+    callsign: Дуб
+    death_date: '2015-10-14'
+    diagnosis: 'Острое лучевое переутомление'
+    grave: { region: '10', settlement_type: '7', settlement: Луганська, street_type: '2', street: Богаднчик, comment: Ком1 }
+    awards: [{ name: 'Звезда круглая', date: '2015-10-31', description: 'За что-то' }]
+    family: [{ lname: Іванова, fname: Галина, sname: Іванівна, tel: { 1: '555', 2: '666', 3: '777' }, name: Мати, date: '', comment: ппаафіава }]
+    relations: { comment: '' }
+    id: s_0

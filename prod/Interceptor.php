@@ -1,5 +1,5 @@
 <?
-namespace stradivari\stradivari_default {
+namespace forzi\ato {
 use \stradivari\core\App;
     abstract class Interceptor extends AbstractInterceptor {
 		public static function loadView($error, $exception) {
