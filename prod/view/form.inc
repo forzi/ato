@@ -235,9 +235,52 @@
 					</div>
 				</div>
 				
+				<label>Військовий квиток</label>
+				<div class="well well-lg">
+					<div class="form-group">
+						<label for="solder_ID" class="col-sm-1">Номер</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="solder_ID" name="solder[ID][number]" value='<?=isset($solder['ID']['number']) ? $solder['ID']['number'] : ''?>' />
+						</div>
+					
+						<label for="solder_ID_date" class="col-sm-1">Дата видачі</label>
+						<div class="col-sm-3">
+							<input type="date" class="form-control" id="solder_passport_date" name="solder[ID][date]" value='<?=isset($solder['ID']['date']) ? $solder['ID']['date'] : ''?>' />
+						</div>
+						<label for="solder_ID_place" class="col-sm-1">Ким виданий</label>
+						<div class="col-sm-3">
+							<textarea class="form-control" id="solder_passport_place" name="solder[ID][place]" value='<?=isset($solder['ID']['place']) ? $solder['ID']['place'] : ''?>'><?=isset($solder['ID']['place']) ? $solder['ID']['place'] : ''?></textarea>
+						</div>
+					</div>
+				</div>
+				
+				<label>Посвідчення УБД</label>
+				<div class="well well-lg">
+					<div class="form-group">
+						<label for="solder_combatant" class="col-sm-1">Номер</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="solder_combatant" name="solder[combatant][number]" value='<?=isset($solder['combatant']['number']) ? $solder['combatant']['number'] : ''?>' />
+						</div>
+					
+						<label for="solder_combatant_date" class="col-sm-1">Дата видачі</label>
+						<div class="col-sm-3">
+							<input type="date" class="form-control" id="solder_passport_date" name="solder[combatant][date]" value='<?=isset($solder['combatant']['date']) ? $solder['combatant']['date'] : ''?>' />
+						</div>
+						<label for="solder_combatant_place" class="col-sm-1">Ким виданий</label>
+						<div class="col-sm-3">
+							<textarea class="form-control" id="solder_passport_place" name="solder[combatant][place]" value='<?=isset($solder['combatant']['place']) ? $solder['combatant']['place'] : ''?>'><?=isset($solder['combatant']['place']) ? $solder['combatant']['place'] : ''?></textarea>
+						</div>
+					</div>
+				</div>
+				
 				<label>Інформація про мобілізацію</label>
 				<div class="well well-lg">
 					<div class="form-group">
+						<label for="solder_demobilisation_number" class="col-sm-1">Хвиля мобілізації</label>
+						<div class="col-sm-2">
+							<input type="text" class="form-control" id="solder_mobilisation_number" name="solder[mobilisation_number]" value='<?=isset($solder['mobilisation_number']) ? $solder['mobilisation_number'] : ''?>' />
+						</div>
+						
 						<label for="solder_mobilisation_date" class="col-sm-1">Дата мобілізації</label>
 						<div class="col-sm-2">
 							<input type="date" class="form-control" id="solder_mobilisation_date" name="solder[mobilisation_date]" value='<?=isset($solder['mobilisation_date']) ? $solder['mobilisation_date'] : ''?>' />
@@ -292,24 +335,52 @@
 						<input type="text" class="form-control col-sm-3" id="solder_mobilisation_place" name="solder[mobilisation_place][place]" value='<?=isset($solder['mobilisation_place']['place']) ? $solder['mobilisation_place']['place'] : ''?>' />
 					</div>
 					<div class="form-group">
-						<label for="solder_unit_ordination" class="col-sm-1">Підрозділ</label>
-						<select class="form-control col-sm-1" id="solder_unit_ordination" name="solder[unit][ordination]">
-							<option value='1' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 1 ? 'selected' : ''?> >ЗСУ</option>
-							<option value='2' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 2 ? 'selected' : ''?> >Національна гвардія</option>
-							<option value='3' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 3 ? 'selected' : ''?> >МВС</option>
-							<option value='4' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 4 ? 'selected' : ''?> >СБУ</option>
-							<option value='5' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 5 ? 'selected' : ''?> >Прикордонна служба</option>
-							<option value='6' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 6 ? 'selected' : ''?> >ДСНС</option>
-							<option value='7' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 7 ? 'selected' : ''?> >ДУК</option>
-							<option value='8' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 8 ? 'selected' : ''?> >Волонтер</option>
-						</select>
-						<input placeholder="Назва" type="text" class="form-control col-sm-3" id="solder_unit_name" name="solder[unit][name]" value='<?=isset($solder['unit']['name']) ? $solder['unit']['name'] : ''?>' />
-						
-						<label for="solder_callsign" class="col-sm-1"></label>
 						<label for="solder_callsign" class="col-sm-1">Позивний</label>
 						<input type="text" class="form-control col-sm-3" id="solder_callsign" name="solder[callsign]" value='<?=isset($solder['callsign']) ? $solder['callsign'] : ''?>' />
 					</div>
 				</div>
+				
+				<label>Підрозділи</label>
+				<div class="well well-lg">
+                <?
+                    if (isset($solder['unit']['ordination'])) {
+                        $solder['unit'] = array($solder['unit']);
+                    }
+                ?>
+                <? foreach($solder['unit'] as $unit) { ?>
+                    <div class="form-group">
+                        <select class="form-control col-sm-1" id="solder_unit_ordination" name="solder[unit][ordination]">
+                            <option value='1' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 1 ? 'selected' : ''?> >ЗСУ</option>
+                            <option value='2' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 2 ? 'selected' : ''?> >Національна гвардія</option>
+                            <option value='3' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 3 ? 'selected' : ''?> >МВС</option>
+                            <option value='4' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 4 ? 'selected' : ''?> >СБУ</option>
+                            <option value='5' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 5 ? 'selected' : ''?> >Прикордонна служба</option>
+                            <option value='6' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 6 ? 'selected' : ''?> >ДСНС</option>
+                            <option value='7' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 7 ? 'selected' : ''?> >ДУК</option>
+                            <option value='8' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 8 ? 'selected' : ''?> >Волонтер</option>
+                            <option value='9' <?=isset($solder['unit']['ordination']) && $solder['unit']['ordination'] == 9 ? 'selected' : ''?> >ЦСО</option>
+                        </select>
+                        <input placeholder="Підрозділ" type="text" class="form-control col-sm-3" id="solder_unit_name" name="solder[unit][name]" value='<?=isset($solder['unit']['name']) ? $solder['unit']['name'] : ''?>' />
+                        <input placeholder="Батальон" type="text" class="form-control col-sm-1" id="solder_unit_battalion" name="solder[unit][battalion]" value='<?=isset($solder['unit']['battalion']) ? $solder['unit']['battalion'] : ''?>' />
+                        <input placeholder="Рота" type="text" class="form-control col-sm-1" id="solder_unit_company" name="solder[unit][company]" value='<?=isset($solder['unit']['company']) ? $solder['unit']['company'] : ''?>' />
+
+                        <label for="solder_unit_start" class="col-sm-1">Початок служби</label>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" id="solder_mobilisation_date" name="solder[unit][start]" value='<?=isset($solder['unit']['start']) ? $solder['unit']['start'] : ''?>' />
+                        </div>
+
+                        <label for="solder_unit_end" class="col-sm-1">Кінець служби</label>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" id="solder_mobilisation_date" name="solder[unit][end]" value='<?=isset($solder['unit']['end']) ? $solder['unit']['end'] : ''?>' />
+                        </div>
+
+                    </div>
+                <? } ?>
+				</div>
+				
+				<label>Звання</label>
+				
+				<label>Поранення</label>
 				
 				<label>Інформація про смерть</label>
 				<div class="well well-lg">
@@ -381,17 +452,31 @@
 				<div class="well well-lg" id="awards_container">
 					<? if (isset($solder['awards'])) foreach ($solder['awards'] as $key => $avard) { ?>
 							<div class="form-group" id="awards_template_<?=$key?>">
-								<label for="solder_awards_<?=$key?>_name" class="col-sm-1">Назва</label>
-								<input type="text" class="form-control col-sm-2" id="solder_awards_<?=$key?>_name" name="solder[awards][<?=$key?>][name]" value="<?=isset($avard['name']) ? $avard['name'] : ''?>" />
-								
-								<label for="solder_awards_<?=$key?>_date" class="col-sm-1">Дата присвоєння</label>
-								<input type="date" class="form-control col-sm-2" id="solder_awards_<?=$key?>_date" name="solder[awards][<?=$key?>][date]" value="<?=isset($avard['date']) ? $avard['date'] : ''?>" />
-								
-								<label for="solder_awards_<?=$key?>_comment" class="col-sm-1">Коментар</label>
-								<input type="text" class="form-control col-sm-3" id="solder_awards_<?=$key?>_comment" name="solder[awards][<?=$key?>][description]" value="<?=isset($avard['description']) ? $avard['description'] : ''?>" />
-								
-								<label for="solder_awards_<?=$key?>_comment" class="col-sm-1"></label>
-								<button type="button" class="btn btn-danger glyphicon glyphicon-minus-sign" id="delete_awards_<?=$key?>" onclick="$(this).parent().remove();"></button>
+								<div class="form-group">
+									<label for="solder_awards_<?=$key?>_number" class="col-sm-1">Номер</label>
+									<input type="text" class="form-control col-sm-1" id="solder_awards_<?=$key?>_number" name="solder[awards][<?=$key?>][number]" value="<?=isset($avard['number']) ? $avard['number'] : ''?>" />
+									
+									<label for="solder_awards_<?=$key?>_name" class="col-sm-1">Назва</label>
+									<input type="text" class="form-control col-sm-3" id="solder_awards_<?=$key?>_name" name="solder[awards][<?=$key?>][name]" value="<?=isset($avard['name']) ? $avard['name'] : ''?>" />
+									
+									<label for="solder_awards_<?=$key?>_rank" class="col-sm-1">Ступінь</label>
+									<select class="form-control col-sm-1" id="solder_awards_<?=$key?>_rank" name="solder[awards][<?=$key?>][rank]">
+										<option value='3' <?=isset($avard['rank']) && $avard['rank'] == 3 ? 'selected' : ''?> >III</option>
+										<option value='2' <?=isset($avard['rank']) && $avard['rank'] == 2 ? 'selected' : ''?> >II</option>
+										<option value='1' <?=isset($avard['rank']) && $avard['rank'] == 1 ? 'selected' : ''?> >I</option>
+									</select>
+									
+									<label for="solder_awards_<?=$key?>_comment" class="col-sm-1"></label>
+									<button type="button" class="btn btn-danger glyphicon glyphicon-minus-sign" id="delete_awards_<?=$key?>" onclick="$(this).parent().parent().remove();"></button>
+								</div>
+								<div class="form-group">
+									<label for="solder_awards_<?=$key?>_date" class="col-sm-1">Дата присвоєння</label>
+									<input type="date" class="form-control col-sm-2" id="solder_awards_<?=$key?>_date" name="solder[awards][<?=$key?>][date]" value="<?=isset($avard['date']) ? $avard['date'] : ''?>" />
+									
+									<label for="solder_awards_<?=$key?>_comment" class="col-sm-1">Коментар</label>
+									<input type="text" class="form-control col-sm-2" id="solder_awards_<?=$key?>_comment" name="solder[awards][<?=$key?>][description]" value="<?=isset($avard['description']) ? $avard['description'] : ''?>" />
+									
+								</div>
 							</div>
 						<? } ?>
 				</div>
@@ -460,18 +545,31 @@
 				</div>
 			</form>
 			
-			<div class="form-group hidden" id="awards_template___id__">
-				<label for="solder_awards___id___name" class="col-sm-1">Назва</label>
-				<input type="text" class="form-control col-sm-2" id="solder_awards___id___name" name="solder[awards][__id__][name]" />
+			<div class="form-group hidden" id="awards_template___id__">			
+				<div class="form-group">
+					<label for="solder_awards___id___number" class="col-sm-1">Номер</label>
+					<input type="text" class="form-control col-sm-1" id="solder_awards___id___number" name="solder[awards][__id__][number]" />
 				
-				<label for="solder_awards___id___date" class="col-sm-1">Дата присвоєння</label>
-				<input type="date" class="form-control col-sm-2" id="solder_awards___id___date" name="solder[awards][__id__][date]" />
-				
-				<label for="solder_awards___id___comment" class="col-sm-1">Коментар</label>
-				<input type="text" class="form-control col-sm-3" id="solder_awards___id___comment" name="solder[awards][__id__][description]" />
-				
-				<label for="solder_awards___id___comment" class="col-sm-1"></label>
-				<button type="button" class="btn btn-danger glyphicon glyphicon-minus-sign" id="delete_awards___id__"></button>
+					<label for="solder_awards___id___name" class="col-sm-1">Назва</label>
+					<input type="text" class="form-control col-sm-3" id="solder_awards___id___name" name="solder[awards][__id__][name]" />
+					
+					<label for="solder_awards___id___rank" class="col-sm-1">Ступінь</label>
+					<select class="form-control col-sm-1" id="solder_awards___id___rank" name="solder[awards][<__id__][rank]">
+						<option value='3'>III</option>
+						<option value='2'>II</option>
+						<option value='1'>I</option>
+					</select>
+					
+					<label for="solder_awards___id___comment" class="col-sm-1"></label>
+					<button type="button" class="btn btn-danger glyphicon glyphicon-minus-sign" id="delete_awards___id__"></button>
+				</div>
+				<div class="form-group">
+					<label for="solder_awards___id___date" class="col-sm-1">Дата присвоєння</label>
+					<input type="date" class="form-control col-sm-2" id="solder_awards___id___date" name="solder[awards][__id__][date]" />
+					
+					<label for="solder_awards___id___comment" class="col-sm-1">Коментар</label>
+					<input type="text" class="form-control col-sm-2" id="solder_awards___id___comment" name="solder[awards][__id__][description]" />
+				</div>
 			</div>
 			
 			<div class="well well-lg hidden" id="family_template___id__">
