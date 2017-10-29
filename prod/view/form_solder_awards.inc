@@ -3,14 +3,20 @@
 	<? if (isset($solder['awards'])) foreach ($solder['awards'] as $key => $avard) { ?>
 			<div class="form-group" id="awards_template_<?=$key?>">
 				<div class="form-group">
-					<label for="solder_awards_<?=$key?>_number" class="col-sm-1">Номер</label>
-					<input type="text" class="form-control col-sm-1" id="solder_awards_<?=$key?>_number" name="solder[awards][<?=$key?>][number]" value="<?=isset($avard['number']) ? $avard['number'] : ''?>" />
-					
-					<label for="solder_awards_<?=$key?>_name" class="col-sm-1">Назва</label>
-					<input type="text" class="form-control col-sm-3" id="solder_awards_<?=$key?>_name" name="solder[awards][<?=$key?>][name]" value="<?=isset($avard['name']) ? $avard['name'] : ''?>" />
-					
+                    <label for="solder_awards_<?=$key?>_type" class="col-sm-1">Нагорода</label>
+                    <select class="form-control col-sm-2" id="solder_awards_<?=$key?>_rank" name="solder[awards][<?=$key?>][type]">
+                        <option value='1' <?=isset($avard['type']) && $avard['type'] == 1 ? 'selected' : ''?> >Медаль (відзнака)</option>
+                        <option value='2' <?=isset($avard['type']) && $avard['type'] == 2 ? 'selected' : ''?> >Орден</option>
+                        <option value='3' <?=isset($avard['type']) && $avard['type'] == 3 ? 'selected' : ''?> >Інше</option>
+                        <option value='4' <?=isset($avard['type']) && $avard['type'] == 4 ? 'selected' : ''?> >Недержавна нагорода</option>
+                    </select>
+
+                    <input type="text" class="form-control col-sm-3" id="solder_awards_<?=$key?>_name" name="solder[awards][<?=$key?>][name]" value="<?=isset($avard['name']) ? $avard['name'] : ''?>" />
+
 					<label for="solder_awards_<?=$key?>_rank" class="col-sm-1">Ступінь</label>
 					<select class="form-control col-sm-1" id="solder_awards_<?=$key?>_rank" name="solder[awards][<?=$key?>][rank]">
+                        <option value='5' <?=isset($avard['rank']) && $avard['rank'] == 5 ? 'selected' : ''?> >V</option>
+                        <option value='4' <?=isset($avard['rank']) && $avard['rank'] == 4 ? 'selected' : ''?> >IV</option>
 						<option value='3' <?=isset($avard['rank']) && $avard['rank'] == 3 ? 'selected' : ''?> >III</option>
 						<option value='2' <?=isset($avard['rank']) && $avard['rank'] == 2 ? 'selected' : ''?> >II</option>
 						<option value='1' <?=isset($avard['rank']) && $avard['rank'] == 1 ? 'selected' : ''?> >I</option>
@@ -20,6 +26,9 @@
 					<button type="button" class="btn btn-danger glyphicon glyphicon-minus-sign" id="delete_awards_<?=$key?>" onclick="$(this).parent().parent().remove();"></button>
 				</div>
 				<div class="form-group">
+                    <label for="solder_awards_<?=$key?>_number" class="col-sm-1">Номер</label>
+                    <input type="text" class="form-control col-sm-1" id="solder_awards_<?=$key?>_number" name="solder[awards][<?=$key?>][number]" value="<?=isset($avard['number']) ? $avard['number'] : ''?>" />
+
 					<label for="solder_awards_<?=$key?>_date" class="col-sm-1">Дата присвоєння</label>
 					<input type="date" class="form-control col-sm-2" id="solder_awards_<?=$key?>_date" name="solder[awards][<?=$key?>][date]" value="<?=isset($avard['date']) ? $avard['date'] : ''?>" />
 					

@@ -8,9 +8,9 @@
 
 		<link href="/source/bootstrap/css/bootstrap.css" rel="stylesheet">
 		
-		<script src="/source/js/jquery/jquery-2.1.3.min.js"></script>
-		<script src="/source/bootstrap/js/bootstrap.min.js"></script>
-		<script src="/source/js/form.js"></script>
+		<script src="/source/js/jquery/jquery-2.1.3.min.js" type="application/javascript"></script>
+		<script src="/source/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+		<script src="/source/js/form.js" type="application/javascript"></script>
 		
 	</head>
 	<body>
@@ -48,6 +48,8 @@
 			<? include(__DIR__ . '/form_solder_units_tpl.inc'); ?>
 			<? include(__DIR__ . '/form_solder_awards_tpl.inc'); ?>
 			<? include(__DIR__ . '/form_solder_family_tpl.inc'); ?>
+            <? include(__DIR__ . '/form_solder_ranks_tpl.inc'); ?>
+            <? include(__DIR__ . '/form_solder_injuries_tpl.inc'); ?>
 		</div>
 		</div>
 	</body>

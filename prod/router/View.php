@@ -52,7 +52,6 @@ abstract class View extends \stradivari\core\AbstractRouter {
 	}
 	protected static function list__get($type = '') {
 		$type = $type ? $type : 'html';
-		
 		$path = static::__getDataFilePath();
 		$solders = [];
 		if (is_readable($path)) {
@@ -87,9 +86,11 @@ abstract class View extends \stradivari\core\AbstractRouter {
 							8 => 'Волонтер',
 							9 => 'ДСО'
 						];
-						$ordination = isset($solder['oredination']) ? $solder['oredination'] : 1;
+						$unit = empty($solder['unit']) ? [] : $solder['unit'];
+						$unit = isset($unit['ordination']) ? $unit : array_pop($unit);
+						$ordination = isset($unit['ordination']) ? $unit['ordination'] : 1;
 						$unit['ordination'] = $ordinations[$ordination];
-						$unit['name'] = isset($solder['unit']['name']) ? $solder['unit']['name'] : '';
+						$unit['name'] = isset($unit['name']) ? $unit['name'] : '';
 						return $unit;
 					}
 				],
@@ -112,6 +113,10 @@ abstract class View extends \stradivari\core\AbstractRouter {
 		}
 		
 	}
+
+    protected static function search__get($type = '') {
+
+    }
 
 	private static function __getDataFilePath() {
 		return Autoloader::searchFile(App::$pool['settings']['defaultSubDir'] . '/data/data.yaml');

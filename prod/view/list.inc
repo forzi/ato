@@ -35,6 +35,7 @@
 					<li><a href="/view/list.json">json</a></li>
 				</ul>
 			</div>
+            <a class="btn btn-primary glyphicon glyphicon-search" href='/view/search/' type="button"></a>
 		</div>
 		<? foreach ($solders as $key => $solder) { ?>
 		<div class="form-group">
