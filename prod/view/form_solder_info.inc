@@ -9,7 +9,7 @@
 		
 		<label for="solder_fname"  class="col-sm-1">Ім`я</label>
 		<div class="col-sm-3">
-			<input type="text" class="form-control" id="solder_fname" name="solder[fname]" value='<?=isset($solder['sname']) ? $solder['fname'] : ''?>' />
+			<input type="text" class="form-control" id="solder_fname" name="solder[fname]" value='<?=isset($solder['fname']) ? $solder['fname'] : ''?>' />
 		</div>
 		
 		<label for="solder_sname"  class="col-sm-1">По Батькові</label>
